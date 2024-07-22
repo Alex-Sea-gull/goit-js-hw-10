@@ -22,6 +22,8 @@ body {
     gap: 32px;
     background-color: #fff;
     padding-top: 50px;
+    width: 400px;
+    margin: 0 auto;
 }
 
 .datetime-input {
@@ -35,6 +37,7 @@ body {
     border-radius: 4px;
     width: 272px;
     height: 40px;
+    padding: 8px 16px;
 }
 
 .btn-start {
