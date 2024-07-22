@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./css/timer.css"></script>
     <title>Timer</title>
   </head>
   <body>
-    <section>
-      <a href="./index.html">Go to home</a>
-      <h1>Timer</h1>
-      <input type="text" id="datetime-picker" />
-      <button type="button" data-start>Start</button>
-
+    <a class="in-start-page" href="./index.html">Go to home</a>
+    <section class="datetime-wrap">
+      <div class="datetime-input">
+        <input type="text" class="datetime-picker" id="datetime-picker" />
+        <button type="button" class="btn-start" data-start>Start</button>
+      </div>
       <div class="timer">
         <div class="field">
           <span class="value" data-days>00</span>
