@@ -4,31 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/snackbar.css" />
     <title>Snakebar</title>
   </head>
+
   <body>
     <section>
-      <a href="./index.html">Go to home</a>
-      <h1>Snackbar</h1>
-      <form class="form">
-        <label>
+      <a class="in-start-page" href="./index.html">Go to home</a>
+      <form class="form js-form">
+        <label class="input-box">
           Delay (ms)
-          <input type="number" name="delay" required />
+          <input type="number" name="delay" class="form-input" required />
         </label>
 
-        <fieldset>
-          <legend>State</legend>
-          <label>
-            <input type="radio" name="state" value="fulfilled" required />
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">State</legend>
+          <label class="form-radio-label">
+            <input
+              type="radio"
+              name="state"
+              value="fulfilled"
+              class="form-radio-input"
+              required
+            />
             Fulfilled
           </label>
-          <label>
-            <input type="radio" name="state" value="rejected" required />
+          <label class="form-radio-label">
+            <input
+              type="radio"
+              name="state"
+              value="rejected"
+              class="form-radio-input"
+              required
+            />
             Rejected
           </label>
         </fieldset>
 
-        <button type="submit">Create notification</button>
+        <button type="submit" class="form-submit-btn">
+          Create notification
+        </button>
       </form>
     </section>
     <script type="module" src="./js/2-snackbar.js"></script>
