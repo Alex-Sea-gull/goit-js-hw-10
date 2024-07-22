@@ -15,13 +15,13 @@
 
 .form {
     width: 440px;
-    padding: 40px;
-    margin-top: 50px;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-color: #ffffff;
     border-radius: 16px;
+    margin: 0 auto;
 }
 
 .input-box {
