@@ -52,6 +52,8 @@ function handleClick() {
             message: 'The timer has started',
             position: 'topRight',
         });
+        timerInput.setAttribute('disabled', 'true');
+        timerBtn.setAttribute('disabled', 'true');
         const intervalID = setInterval(() => {
             let diff = userSelectedDate - new Date();
             if (diff >= 0) {
@@ -59,6 +61,7 @@ function handleClick() {
                 updateTimerDisplay(timerTime);
             } else {
                 timerInput.removeAttribute('disabled');
+                timerBtn.removeAttribute('disabled');
                 iziToast.success({
                     title: 'Timer Finished',
                     message: 'The timer is over',
@@ -67,8 +70,6 @@ function handleClick() {
                 clearInterval(intervalID);
             }
         }, 1000);
-        timerInput.setAttribute('disabled', 'true');
-        timerBtn.setAttribute('disabled', 'true');
     }
 }
 
