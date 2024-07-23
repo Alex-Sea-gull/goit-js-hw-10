@@ -11,32 +11,33 @@ function handleFormSabmit(event) {
     const formElement = event.currentTarget;
     const getFormElements = formElement.elements;
     const selectedOptionForm = getFormElements.state.value;
-    const inputValueForm = getFormElements.delay.value;
+    const inputValueForm = parseInt(getFormElements.delay.value);
 
     const promise = new Promise((resolve, reject) => {
-        if (selectedOptionForm === 'fulfilled') {
-            resolve(inputValueForm);
-        } else {
-            reject(inputValueForm);
-        }
+        setTimeout(() => {
+            if (selectedOptionForm === 'fulfilled') {
+                resolve(inputValueForm);
+            } else {
+                reject(inputValueForm);
+            }
+        }, inputValueForm);
     });
+
     promise
         .then(delay => {
-            return setTimeout(() => {
-                iziToast.success({
-                    title: 'OK',
-                    message: `✅ Fulfilled promise in ${delay}ms`,
-                    position: 'topCenter',
-                }); formElement.reset();
-            }, delay);
+            iziToast.success({
+                title: 'OK',
+                message: `✅ Fulfilled promise in ${delay}ms`,
+                position: 'topCenter',
+            });
+            formElement.reset();
         })
         .catch(delay => {
-            return setTimeout(() => {
-                iziToast.error({
-                    title: 'Error',
-                    message: `❌ Rejected promise in ${delay}ms`,
-                    position: 'topCenter',
-                }); formElement.reset();
-            }, delay);
+            iziToast.error({
+                title: 'Error',
+                message: `❌ Rejected promise in ${delay}ms`,
+                position: 'topCenter',
+            });
+            formElement.reset();
         });
 }
